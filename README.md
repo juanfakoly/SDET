@@ -31,4 +31,4 @@ Feature: As an Amazon user I want searching to some product to verify it
 ```
 
 - parameter `**parameter**` in the **When** sentence replace it including \*\*
-- parameter into `|parameter|` makes references to product title, replace it without including `||`
+- parameter into `|parameter|` makes references to product title, replace it without including `||` in the **Then** sentence
