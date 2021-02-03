@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="My test suite" verbose="1" parallel="false">
+    <parameter name="browser" value="" />
+    <parameter name="product" value="" />
+    <parameter name="productTitle" value="" />
+    <test name="My first test" preserve-order="true">
+        <classes>
+            <class name="com.automation.amazon.SearchingProducts"></class>
+        </classes>
+    </test>
+</suite>

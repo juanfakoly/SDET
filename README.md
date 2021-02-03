@@ -2,33 +2,26 @@
 
 ## HOW RUN IT
 
-in the IDE of their choice, you might import de project as a gradle project
+first you need finding the file here `src/test/java/com/automation/amazon/Suite.xml`
 
-- IT IS NECESSARY HAVE INSTALLED [GRADLE](https://gradle.org/releases/) IN YOUR SYSTEM
+once there you might choose the web browser to run the test
 
----
+`chrome` or `firefox`
 
-Into parameters setting to run the test you might set browser parameters
-
-- the following command allows running the test from you terminal
-
-`gradle clean test --test *SearchingProducts -Dcontext=<Brower> -Dwebdriver.driver=<Browser> aggregate --info`
-
-- replace `<Browser>` by `chrome` or `firefox`
-
-* this path contains the test case inside `src/test/resources/features/searching_products.feature`
-
-whether you want to modify the searching, change the the following parameter here.
-
-```gherkin
-Feature: As an Amazon user I want searching to some product to verify it
-
-  Scenario: searching product
-    Given the user wants searching a product from amazon
-    When he/she has found the product called Software Test Design
-    Then he/she verifies whether product contains a title and a mediaTap
-      |Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices|
+```xml
+<parameter name="browser" value="" />
 ```
 
-- parameter `**parameter**` in the **When** sentence replace it including \*\*
-- parameter into `|parameter|` makes references to product title, replace it without including `||` in the **Then** sentence
+there you might find another parameters
+
+```xml
+<parameter name="product" value="" />
+<parameter name="productTitle" value="" />
+```
+
+- IS NECESSARY SET EVERY VALUE TO THESE PARAMETERS.
+
+* You should add the web drivers in the following path `src/test/`
+  and modify the property `System.setProperty()` into `MyDriver.java`
+
+`MyDriver.java` could found in `src/main/java/com/automation/amazon/`

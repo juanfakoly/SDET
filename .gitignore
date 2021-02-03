@@ -1,8 +1,11 @@
-
-.gradle
-build/
+target
+test-output
+.classpath
+.project
+.settings
 .DS_Store
 .idea/
-target/
+/target
 chromedriver
 geckodriver
+endavaTestPO.iml
